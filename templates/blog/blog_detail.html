@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+
+<!-- Blog Header -->
+<section class="bg-dark text-white py-5">
+
+    <div class="container">
+
+        <span class="badge bg-warning text-dark">
+
+            {{ post.category }}
+
+        </span>
+
+        <h1 class="display-5 fw-bold mt-3">
+
+            {{ post.title }}
+
+        </h1>
+
+        <p class="text-light">
+
+            Published on {{ post.created_at }}
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Blog Content -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <img src="{{ post.image.url }}"
+             class="img-fluid rounded shadow mb-5 w-100"
+             style="max-height:500px;object-fit:cover;"
+             alt="{{ post.title }}">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10">
+
+                <p class="lead">
+
+                    {{ post.excerpt }}
+
+                </p>
+
+                <hr>
+
+                <div style="line-height:2; font-size:18px;">
+
+                    {{ post.content|linebreaks }}
+
+                </div>
+
+                <div class="mt-5">
+
+                    <a href="{% url 'blog' %}"
+                       class="btn btn-warning">
+
+                        ← Back to Blog
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

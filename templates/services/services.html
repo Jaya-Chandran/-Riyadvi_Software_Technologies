@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <h1 class="text-center mb-5">
+        Our Services
+    </h1>
+
+    <div class="row">
+
+        {% for service in services %}
+
+      
+        <div class="col-md-4 mb-4">
+
+            <div class="card h-100 shadow">
+
+                  {% if service.image%}
+                <img src="{{ service.image.url }}" alt="{{ service.title}}"
+                     class="card-img-top">
+                    {% endif %}
+                    
+                <div class="card-body">
+
+                    <h4>{{ service.title }}</h4>
+
+                    <p>{{ service.short_description }}</p>
+
+                  <a href="{{ service.get_absolute_url }}" class="btn btn-warning">
+                     Learn More
+                  </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

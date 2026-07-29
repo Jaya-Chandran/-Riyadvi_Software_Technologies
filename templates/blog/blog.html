@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Our Blog</h1>
+        <p class="lead">
+            Latest insights, technology trends, and business solutions.
+        </p>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="row">
+
+            {% for post in posts %}
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="card h-100 shadow border-0 rounded-4">
+
+                    <img src="{{ post.image.url }}"
+                         class="card-img-top"
+                         style="height:230px;object-fit:cover;"
+                         alt="{{ post.title }}">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark mb-2">
+                            {{ post.category }}
+                        </span>
+
+                        <h4 class="fw-bold">
+                            {{ post.title }}
+                        </h4>
+
+                        <p class="text-muted">
+                            {{ post.created_at }}
+                        </p>
+
+                        <p>
+                            {{ post.excerpt }}
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+
+                        <a href="{{ post.get_absolute_url }}"
+                           class="btn btn-warning w-100">
+
+                            Read More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="text-center">
+
+                <h3>No Blog Posts Available</h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

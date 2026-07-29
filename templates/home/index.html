@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">
+                    Custom Software & Digital Solutions
+                </h1>
+
+                <p class="lead mt-3">
+                    Web Development, Mobile Apps, UI/UX Design and Digital Marketing tailored for your business.
+                </p>
+
+                <a href="{% url "contact"%}" class="btn btn-warning btn-lg mt-3">
+                    Book Free Consultation
+                </a>
+
+                <a href="{% url "portfolio" %}" class="btn btn-outline-light btn-lg mt-3 ms-2">
+                    View Portfolio
+                </a>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="https://fastly.picsum.photos/id/43/1280/831.jpg?hmac=glK-rQ0ppFClW-lvjk9FqEWKog07XkOxJf6Xg_cU9LI"
+                     class="img-fluid rounded"
+                     alt="Hero Image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5 bg-warning">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Services</h2>
+            <p class="text-muted">
+                We provide complete digital solutions for businesses.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow service-card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h4>🌐</h4>
+                        <h5>Web Development</h5>
+                        <p>Modern, responsive and scalable websites.</p>
+                         <a href="{% url "services" %}" class="btn btn-outline-light">view all services</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow service-card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h4>📱</h4>
+                        <h5>App Development</h5>
+                        <p>Android and iOS applications for your business.</p>
+                         <a href="{% url "services" %}" class="btn btn-outline-light">view all services</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow service-card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h4>🎨</h4>
+                        <h5>UI/UX Design</h5>
+                        <p>Beautiful and user-friendly interface designs.</p>
+                         <a href="{% url "services" %}" class="btn btn-outline-light">view all services</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow service-card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h4>📈</h4>
+                        <h5>Digital Marketing</h5>
+                        <p>SEO, social media marketing and paid campaigns.</p>
+                         <a href="{% url "services" %}" class="btn btn-outline-light">view all services</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow service-card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h4>🥽</h4>
+                        <h5>AR / VR</h5>
+                        <p>Immersive augmented and virtual reality solutions.</p>
+                         <a href="{% url "services" %}" class="btn btn-outline-light">view all services</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow service-card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h4>🧊</h4>
+                        <h5>3D Modeling</h5>
+                        <p>High-quality 3D designs and product visualization.</p>
+                         <a href="{% url "services" %}" class="btn btn-outline-light">view all services</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-warning">Why Choose Riyadvi?</h2>
+            <p class="text-light">
+                We help businesses transform ideas into powerful digital solutions.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card choose-card h-100 text-center p-4">
+                    <div class="display-4">🏆</div>
+                    <h4 class="mt-3">Since 2021</h4>
+                    <p>Trusted software company delivering innovative solutions.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card choose-card h-100 text-center p-4">
+                    <div class="display-4">🚀</div>
+                    <h4 class="mt-3">End-to-End Solutions</h4>
+                    <p>From planning and design to development and deployment.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card choose-card h-100 text-center p-4">
+                    <div class="display-4">💡</div>
+                    <h4 class="mt-3">Business Health Checkup</h4>
+                    <p>Free consultation to help your business grow digitally.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Portfolio Preview -->
+<section class="py-5 bg-warning">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Recent Projects</h2>
+            <p class="text-muted">
+                A glimpse of our successful digital solutions.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card shadow h-100">
+                    <img src="https://picsum.photos/400/250?random=1"
+                         class="card-img-top"
+                         alt="E-Commerce Project">
+                    <div class="card-body">
+                        <h5 class="card-title">E-Commerce Website</h5>
+                        <p class="card-text">
+                            Built using Django, Bootstrap and PostgreSQL.
+                        </p>
+
+                        <a href="#" class="btn btn-warning">
+                            View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card shadow h-100">
+                    <img src="https://picsum.photos/400/250?random=2"
+                         class="card-img-top"
+                         alt="Healthcare App">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare App</h5>
+                        <p class="card-text">
+                            Mobile healthcare management platform.
+                        </p>
+
+                        <a href="#" class="btn btn-warning">
+                            View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card shadow h-100">
+                    <img src="https://picsum.photos/400/250?random=3"
+                         class="card-img-top"
+                         alt="ERP Dashboard">
+                    <div class="card-body">
+                        <h5 class="card-title">ERP Dashboard</h5>
+                        <p class="card-text">
+                            Business management dashboard with analytics.
+                        </p>
+
+                        <a href="#" class="btn btn-warning">
+                            View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-warning">What Our Clients Say</h2>
+            <p>Trusted by businesses across different industries.</p>
+        </div>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="text-center">
+                        <img src="https://i.pravatar.cc/120?img=10"
+                             class="rounded-circle mb-3"
+                             width="100">
+                        <h5>Rahul Sharma</h5>
+                        <p class="text-warning">★★★★★</p>
+
+                        <p class="w-75 mx-auto">
+                            Riyadvi delivered our website on time with excellent quality.
+                            Their team was professional and responsive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="https://i.pravatar.cc/120?img=20"
+                             class="rounded-circle mb-3"
+                             width="100">
+                        <h5>Priya Nair</h5>
+                        <p class="text-warning">★★★★★</p>
+
+                        <p class="w-75 mx-auto">
+                            Our mobile application exceeded expectations.
+                            Highly recommended.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="https://i.pravatar.cc/120?img=30"
+                             class="rounded-circle mb-3"
+                             width="100">
+                        <h5>Arun Kumar</h5>
+                        <p class="text-warning">★★★★★</p>
+
+                        <p class="w-75 mx-auto">
+                            Great UI/UX design and smooth communication throughout
+                            the project.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Call To Action -->
+<section class="py-5" style="background:#D4AF37;">
+    <div class="container text-center">
+
+        <h2 class="fw-bold text-dark">
+            Ready to Build Your Next Digital Product?
+        </h2>
+
+        <p class="lead text-dark mt-3">
+            Let's discuss your project and turn your ideas into reality.
+        </p>
+
+        <a href="{% url "contact"%}" class="btn btn-dark btn-lg mt-3 px-4">
+            Book Free Consultation
+        </a>
+
+        <a href="{% url "contact"%}" class="btn btn-outline-dark btn-lg mt-3 ms-2 px-4">
+            Contact Us
+        </a>
+
+    </div>
+</section>
+
+
+
+{% endblock %}

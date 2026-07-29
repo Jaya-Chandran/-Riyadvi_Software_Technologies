@@ -1,0 +1,98 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f8ee7f;
+}
+
+.btn-warning{
+    background:#D4AF37;
+    border:none;
+}
+
+.btn-warning:hover{
+    transform:scale(1.05);
+    transition:.3s;
+}
+/* service */
+.service-card{
+    border:none;
+    border-radius:20px;
+    transition:0.3s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(212,175,55,0.3);
+}
+
+/* why choose riyadvi */
+.choose-card{
+    border:none;
+    border-radius:20px;
+    transition:0.3s ease;
+}
+
+.choose-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(212,175,55,0.3);
+}
+
+/* portfolio */
+.portfolio-card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.portfolio-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+/* testimonials */
+.carousel-item{
+    min-height:300px;
+}
+
+.carousel img{
+    border:4px solid #D4AF37;
+}
+
+/* blog */
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    border-radius:15px 15px 0 0;
+}
+
+.badge{
+    font-size:14px;
+    padding:8px 15px;
+}
+
+.btn-warning{
+    background:#D4AF37;
+    border:none;
+    font-weight:600;
+}
+
+.btn-warning:hover{
+    background:#b89322;
+}
+
+.blog-content{
+    line-height:2;
+    font-size:18px;
+}

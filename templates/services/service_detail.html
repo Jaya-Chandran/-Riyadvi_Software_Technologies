@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ service.title }}{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <div class="row">
+
+        <div class="col-lg-6">
+
+            <img src="{{ service.image.url }}"
+                 class="img-fluid rounded shadow">
+
+        </div>
+
+        <div class="col-lg-6">
+
+            <h1>{{ service.title }}</h1>
+
+            <p class="lead">
+                {{ service.short_description }}
+            </p>
+
+            <hr>
+
+            <h4>Description</h4>
+
+            <p>{{ service.description }}</p>
+
+            <h4>Technology Stack</h4>
+
+            <p>{{ service.tech_stack }}</p>
+
+            <h4>Key Features</h4>
+
+            <p>{{ service.features }}</p>
+
+            <a href="/contact/" class="btn btn-warning btn-lg mt-3">
+                Get a Quote
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
