@@ -166,10 +166,14 @@ cloudinary.config(
     secure=True,
 )
 
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
-#Cloudinary (media storage)
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# DEFAULT AUTO FIELD
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
